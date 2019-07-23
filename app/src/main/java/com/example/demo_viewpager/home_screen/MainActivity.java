@@ -10,9 +10,9 @@ import com.example.demo_viewpager.R;
 import com.example.demo_viewpager.home_screen.adapter.HomeViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
-    TabLayout tabLayout;
-    ViewPager viewPager;
-    HomeViewPagerAdapter viewPagerAdapter;
+    private TabLayout mTablayout;
+    private ViewPager mViewPager;
+    private HomeViewPagerAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        tabLayout = findViewById(R.id.tab_layout);
-        viewPager = findViewById(R.id.view_pager);
-        viewPagerAdapter = new HomeViewPagerAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(viewPagerAdapter);
-        tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.news_feeds);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_folder_shared);
-        tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewPager){
+        mTablayout = findViewById(R.id.tab_layout);
+        mViewPager = findViewById(R.id.view_pager);
+        mAdapter = new HomeViewPagerAdapter(getSupportFragmentManager());
+        mViewPager.setAdapter(mAdapter);
+        mTablayout.setupWithViewPager(mViewPager);
+        mTablayout.getTabAt(0).setIcon(R.drawable.news_feeds);
+        mTablayout.getTabAt(1).setIcon(R.drawable.ic_folder_shared);
+        mTablayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager) {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
                 super.onTabReselected(tab);

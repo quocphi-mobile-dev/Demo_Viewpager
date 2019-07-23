@@ -26,7 +26,7 @@ import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
 public class ItemViewFragment extends Fragment {
     private Button mButtonAddItem ;
     private RecyclerView mRecyclerViewItem;
-    ItemViewAdapter mAdapter;
+    private  ItemViewAdapter mAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
