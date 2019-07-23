@@ -24,7 +24,7 @@ public class ItemViewAdapter extends RecyclerView.Adapter<ItemViewAdapter.ViewHo
     @Override
     public ItemViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater mLayoutInflater = LayoutInflater.from(viewGroup.getContext());
-        View view = mLayoutInflater.inflate(R.layout.item_view,viewGroup,false);
+        View view = mLayoutInflater.inflate(R.layout.item_view, viewGroup, false);
         return new ItemViewAdapter.ViewHolder(view);
     }
 
@@ -44,22 +44,27 @@ public class ItemViewAdapter extends RecyclerView.Adapter<ItemViewAdapter.ViewHo
         // add item postion
         notifyItemInserted(mDatas.size() - 1);
     }
+
     public void removeItem(int position) {
         mDatas.remove(position);
         notifyDataSetChanged();
         notifyItemRemoved(position);
     }
+
     public void replaceItem(int postion, String item) {
 
         mDatas.remove(postion);
         mDatas.add(postion, item);
         notifyItemChanged(postion);
     }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView tvItem;
         Context context;
+
         public ViewHolder(@NonNull View itemView) {
-            super(itemView);context = itemView.getContext();
+            super(itemView);
+            context = itemView.getContext();
             tvItem = itemView.findViewById(R.id.text_item);
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {

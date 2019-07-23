@@ -17,19 +17,10 @@ import java.util.List;
 public class ItemAnimationAdapter extends RecyclerView.Adapter<ItemAnimationAdapter.ViewHolder> {
     List<String> mData;
 
-    public ItemAnimationAdapter() {
-        mData = new ArrayList();
-    }
-
     public ItemAnimationAdapter(List<String> mData) {
         this.mData = mData;
     }
 
-    public void addData(List<String> data) {
-        mData.addAll(data);
-        notifyItemInserted(mData.size() - 1);
-        notifyDataSetChanged();
-    }
     public void onMove(int fromPosition, int toPosition) {
         if (fromPosition < toPosition) {
             for (int i = fromPosition; i < toPosition; i++) {
@@ -42,15 +33,17 @@ public class ItemAnimationAdapter extends RecyclerView.Adapter<ItemAnimationAdap
         }
         notifyItemMoved(fromPosition, toPosition);
     }
+
     public void swipe(int position, int direction) {
         mData.remove(position);
         notifyItemRemoved(position);
     }
+
     @NonNull
     @Override
     public ItemAnimationAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater mLayoutInflater = LayoutInflater.from(viewGroup.getContext());
-        View view = mLayoutInflater.inflate(R.layout.item_animation_view,viewGroup,false);
+        View view = mLayoutInflater.inflate(R.layout.item_animation_view, viewGroup, false);
         return new ViewHolder(view);
     }
 
@@ -66,12 +59,12 @@ public class ItemAnimationAdapter extends RecyclerView.Adapter<ItemAnimationAdap
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView mTextTitle;
-        Context context;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            context = itemView.getContext();
             mTextTitle = itemView.findViewById(R.id.text_title);
         }
+
         private void bindData(String data) {
             if (data == null) {
                 return;

@@ -18,12 +18,10 @@ public class HomeViewPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int i) {
         switch (i){
             case 0 : return  new ItemViewFragment();
-            case 1: return new ItemAnimationFragment();
+            case 1: return  new ItemAnimationFragment();
         }
-
         return null;
     }
-
     @Override
     public int getCount() {
         return PAGE_NUMBER;
