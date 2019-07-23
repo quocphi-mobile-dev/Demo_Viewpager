@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="color_primary">#008577</color>
+    <color name="color_primary_dark">#00574B</color>
+    <color name="color_accent">#D81B60</color>
+    <color name="color_fun_blue">#2F4B8A</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_free_speech_blue">#4267BB</color>
+    <color name="color_panache_green">#f1f8e9</color>
+    <color name="color_solitude_blue">#ECF0F1</color>
+    <!-- Screens background color-->
+    <color name="color_french_rose_red">#f64c73</color>
+    <color name="color_light_sea_green">#20d2bb</color>
+    <color name="color_dodger_blue">#3395ff</color>
+    <color name="color_heliotrope_violet">#c873f4</color>
+
+    <color name="color_cornflower_blue">#6495ED</color>
+
+    <!-- dots inactive colors -->
+    <color name="color_dark_screen1">#d1395c</color>
+    <color name="color_dark_screen2">#14a895</color>
+    <color name="color_dark_screen3">#2278d4</color>
+    <color name="color_dark_screen4">#a854d4</color>
+
+    <!-- dots active colors -->
+    <color name="color_light_screen1">#f98da5</color>
+    <color name="color_light_screen2">#8cf9eb</color>
+    <color name="color_light_screen3">#93c6fd</color>
+    <color name="color_light_screen4">#e4b5fc</color>
+
+    <array name="array_dot_active">
+        <item>@color/color_dark_screen1</item>
+        <item>@color/color_dark_screen2</item>
+        <item>@color/color_dark_screen3</item>
+        <item>@color/color_dark_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/color_light_screen1</item>
+        <item>@color/color_light_screen2</item>
+        <item>@color/color_light_screen3</item>
+        <item>@color/color_light_screen4</item>
+    </array>
 </resources>

@@ -1,3 +1,23 @@
 <resources>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="app_name">Demo_Viewpager</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="title_next">NEXT</string>
+    <string name="title_skip">SKIP</string>
+    <string name="title_content">Description content</string>
+    <string name="title_add_item">Add Item</string>
+
+    <string name="title_start">GOT IT</string>
+
+    <string name="title_slide_1">Hello Food!</string>
+    <string name="desc_silde_1">The easiest way to order food from your favourite restaurant!</string>
+
+    <string name="title_slide_2">Movie Tickets</string>
+    <string name="desc_silde_2">Book movie tickets for your family and friends!</string>
+
+    <string name="title_slide_3">Great Discounts</string>
+    <string name="desc_silde_3">Best discounts on every single service we offer!</string>
+
+    <string name="title_slide_4">World Travel</string>
+    <string name="desc_silde_4">Book tickets of any transportation and travel the world!</string>
 </resources>
